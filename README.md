@@ -8,12 +8,15 @@ The following libraries and model files need to be downloaded in order to run Pa
 
  * Bernd Bohnet's dependency parser and model files ([`anna-3.3.jar` and `CoNLL2009-ST-English*.model`](http://code.google.com/p/mate-tools/downloads/))<sup>1</sup>
  * The WSJ tokenizer from Stanford CoreNLP ([`stanford-corenlp-3.x.jar`](http://nlp.stanford.edu/software/corenlp.shtml)) 
- * The most recent _PathLSTM_ SRL model (July 2016), available from Google Drive [here][3] 
+ * The most recent _PathLSTM_ SRL model (July 2016), available from Google Drive [here][3]
 
 # Running PathLSTM  
 
-If copies of all required libraries and models are available in the subdirectories `lib/` and `models/`, respectively, PathLSTM can simply be executed as a standalone application using the script `scripts/parse.sh`. These scripts run necessary preprocessing tools on a given input text file (assuming one sentence per line), and apply our state-of-the-art model for identifying and role labeling of semantic predicate-argument structures.
-
+If copies of all required libraries and models are available in the subdirectories `lib/` and `models/`, respectively, PathLSTM can simply be executed as a standalone application using the script `scripts/parse.sh`. These scripts run necessary preprocessing tools on a given input text file (assuming one sentence per line), and apply our state-of-the-art model for identifying and role labeling of semantic predicate-argument structures. Starting from the original project a Maven project has been created with all the required dependencies. Moreover, an executable JAR can be create using the following command:
+```
+mvn assembly:single
+```
+and it can be used to execute the main application `CompletePipeline.java`.
 It is also possible to apply the PathLSTM model on already preprocessed text in the CoNLL 2009 format, using the Java class `se.lth.cs.srl.Parse`. Since PathLSTM is trained based on preprocessed input from specific pipelines, however, we strongly recommend to use the complete pipeline to achieve best performance. 
 
 # References
