@@ -12,7 +12,7 @@ The following libraries and model files need to be downloaded in order to run Pa
 
 # Running PathLSTM  
 
-If copies of all required libraries and models are available in the subdirectories `lib/` and `models/`, respectively, PathLSTM can simply be executed as a standalone application using the script `scripts/parse.sh`. These scripts run necessary preprocessing tools on a given input text file (assuming one sentence per line), and apply our state-of-the-art model for identifying and role labeling of semantic predicate-argument structures. Starting from the original project a Maven project has been created with all the required dependencies. Moreover, an executable JAR can be create using the following command:
+If copies of all required libraries and models are available in the subdirectories `lib/` and `models/`, respectively, PathLSTM can simply be executed as a standalone application using the script `scripts/parse.sh`. These scripts run necessary preprocessing tools on a given input text file (assuming one sentence per line), and apply our state-of-the-art model for identifying and role labeling of semantic predicate-argument structures. Starting from the original project a Maven project has been created with all the required dependencies. Moreover, an executable JAR can be created using the following command:
 ```
 mvn assembly:single
 ```
